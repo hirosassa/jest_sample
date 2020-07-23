@@ -22,7 +22,6 @@ jobs:
       - name: Run Jest
         run: yarn jest
       - name: Show coverage in comments
-        uses: ChristiaanScheermeijer/jest-reporter-action@v0.4.0
+        uses: romeovs/lcov-reporter-action@v0.2.17
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
-          test-command: "yarn jest --coverage"
