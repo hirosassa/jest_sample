@@ -22,13 +22,6 @@ jobs:
         run: yarn lint
       - name: Run Jest
         run: yarn jest
-      - name: Upload test coverage artifact
-        steps:
-          - run: 'mkdir --parents results/artifacts'
-          - uses: actions/upload-artifact@v2
-            with:
-              name: coverage
-              path: results/artifacts
       - name: Show coverage in comments
         uses: ziishaned/jest-reporter-action@v0.0.1
         with:
