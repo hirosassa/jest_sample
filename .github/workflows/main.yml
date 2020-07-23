@@ -22,8 +22,7 @@ jobs:
       - name: Run Jest
         run: yarn jest
       - name: Show coverage in comments
-        uses: mattallty/jest-github-action@v1
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        uses: dkershner6/jest-coverage-commenter-action@v1
         with:
-          test-command: "yarn test --coverage"
+          github_token: "${{ secrets.GITHUB_TOKEN }}"
+          test_command: "yarn test --coverage"
